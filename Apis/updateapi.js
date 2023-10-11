@@ -17,8 +17,6 @@ router.get("/update" , (req, res) =>{
       };
       let keys = Object.keys(payload.databasefields);
       let values = Object.values(payload.databasefields);
-      console.log("keys>>", keys);
-      console.log("values>>", values);
       try {
           pool.getConnection((err , connection) => {
               if (err){
