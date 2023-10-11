@@ -15,6 +15,7 @@ router.get("/insertApi", (req, res) => {
     pool.getConnection((err, connection) => {
       if (err) {
         console.log("eror >>>", err);
+        
       }
       connection.query(
         `INSERT INTO ${payload.tableName} SET ?`,

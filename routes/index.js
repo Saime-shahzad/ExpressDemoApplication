@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const createTestApi = require("../Apis/testApi");
-// const insertApi=require("../Apis/createApi")
+
 const insertApi = require("../Apis/createApi");
 const updateApi = require("../Apis/updateapi");
 
