@@ -4,7 +4,6 @@ const pool = require("../Utils/db");
 const tableName = require("../tableNames/tableNames");
 
 router.get("/insertApi", (req, res) => {
-  console.log("req.body >>>>");
   let payload = {
     tableName: tableName.testing,
     databaseFields: {

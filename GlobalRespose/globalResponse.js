@@ -1,6 +1,7 @@
-module.exports = function (success) {
+module.exports = function (success, message, payload) {
     return {
       success: success,
-     
+      message: message,
+      payload: payload,
     };
   };
