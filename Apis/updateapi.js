@@ -4,15 +4,15 @@ const express = require("express");
 const tableName = require("../tableNames/tableNames");
 const router = express.Router();
 
-router.get("/update" , (req, res) =>{
+router.post("/update" , (req, res) =>{
   
 
     let payload = {
-        id:1,
+        id:req.body.id,
 
         tableName: tableName.testing,
       databasefields:{
-        userName:"khansaad"
+        userName:req.body.userName
       }
       };
       let keys = Object.keys(payload.databasefields);

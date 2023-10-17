@@ -3,16 +3,17 @@ const router = express.Router();
 const pool = require("../Utils/db");
 const tableName = require("../tableNames/tableNames");
 
-router.get("/insertApi", (req, res) => {
+router.post("/insertApi", (req, res) => {
+  console.log("req>>", req.body);
   let payload = {
     tableName: tableName.testing,
     databaseFields: {
-      userName: "saad khan",
+      userName: req.body.userName,
     },
   };
   // // console.log(payload);
   try {
-    pool.getConnection((err, connection) => {
+    pool.getConnection(async(err, connection) => {
       if (err) {
         console.log("eror >>>", err);
         

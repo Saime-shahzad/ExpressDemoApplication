@@ -3,11 +3,14 @@ const cors = require("cors");
 const http = require("http");
 const app = express();
 const appRouter = require("./routes");
+const morgan = require("morgan");
+
 
 app.use(cors());
+app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
+app.use(express.static("public"));
 app.use("/", appRouter)
 // app.get("randomuser.me/api/", function (req, res, next) {
 //     res.send("Success");
