@@ -1,7 +1,7 @@
 
 
-export const domain = "https://demo-express-api.digitalcoverage.com.pk/api";
-// export const domain = "http://localhost:5000/api";
+// export const domain = "https://demo-express-api.digitalcoverage.com.pk/api";
+export const domain = "http://localhost:5000/api";
 
 
 //admin section
